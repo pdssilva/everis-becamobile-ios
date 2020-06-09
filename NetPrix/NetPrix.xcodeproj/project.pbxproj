@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1707F3FF24902ED900A99F0F /* DetalhesFilmesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707F3FE24902ED900A99F0F /* DetalhesFilmesViewController.swift */; };
+		1739493F248FE057003052CE /* ColecaoDeFilmeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1739493E248FE057003052CE /* ColecaoDeFilmeCollectionViewCell.swift */; };
 		1774BF5D248AD2CE00D347E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1774BF5C248AD2CE00D347E7 /* AppDelegate.swift */; };
 		1774BF5F248AD2CE00D347E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1774BF5E248AD2CE00D347E7 /* ViewController.swift */; };
 		1774BF62248AD2CE00D347E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1774BF60248AD2CE00D347E7 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1707F3FE24902ED900A99F0F /* DetalhesFilmesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesFilmesViewController.swift; sourceTree = "<group>"; };
+		1739493E248FE057003052CE /* ColecaoDeFilmeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColecaoDeFilmeCollectionViewCell.swift; sourceTree = "<group>"; };
 		1774BF59248AD2CE00D347E7 /* NetPrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetPrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1774BF5C248AD2CE00D347E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1774BF5E248AD2CE00D347E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +48,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1707F3FB2490276600A99F0F /* Detalhes do Filme */ = {
+			isa = PBXGroup;
+			children = (
+				1707F3FD2490278100A99F0F /* View */,
+				1707F3FC2490277300A99F0F /* Controller */,
+			);
+			path = "Detalhes do Filme";
+			sourceTree = "<group>";
+		};
+		1707F3FC2490277300A99F0F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1707F3FE24902ED900A99F0F /* DetalhesFilmesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1707F3FD2490278100A99F0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1739493D248FE02E003052CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1739493E248FE057003052CE /* ColecaoDeFilmeCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1774BF50248AD2CE00D347E7 = {
 			isa = PBXGroup;
 			children = (
@@ -67,11 +103,12 @@
 			children = (
 				1774BF5C248AD2CE00D347E7 /* AppDelegate.swift */,
 				1774BF63248AD2D000D347E7 /* Assets.xcassets */,
-				177E8467248AEFDD006970EB /* Controller */,
-				177E846D248B1564006970EB /* Home */,
+				1707F3FB2490276600A99F0F /* Detalhes do Filme */,
 				1774BF68248AD2D000D347E7 /* Info.plist */,
 				1774BF65248AD2D000D347E7 /* LaunchScreen.storyboard */,
+				177E846D248B1564006970EB /* Lista De Filmes */,
 				1774BF60248AD2CE00D347E7 /* Main.storyboard */,
+				177E8464248AE26E006970EB /* Model */,
 			);
 			path = NetPrix;
 			sourceTree = "<group>";
@@ -93,12 +130,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		177E846D248B1564006970EB /* Home */ = {
+		177E846D248B1564006970EB /* Lista De Filmes */ = {
 			isa = PBXGroup;
 			children = (
-				177E8464248AE26E006970EB /* Model */,
+				177E8467248AEFDD006970EB /* Controller */,
+				1739493D248FE02E003052CE /* View */,
 			);
-			path = Home;
+			path = "Lista De Filmes";
 			sourceTree = "<group>";
 		};
 		3C03E4F235FABFE085E18452 /* Frameworks */ = {
@@ -235,8 +273,10 @@
 			files = (
 				1774BF5F248AD2CE00D347E7 /* ViewController.swift in Sources */,
 				17CF5FB6248D9B7D0027DC33 /* FilmeAPI.swift in Sources */,
+				1707F3FF24902ED900A99F0F /* DetalhesFilmesViewController.swift in Sources */,
 				1774BF5D248AD2CE00D347E7 /* AppDelegate.swift in Sources */,
 				17CF5FB4248D8E3E0027DC33 /* Filme.swift in Sources */,
+				1739493F248FE057003052CE /* ColecaoDeFilmeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

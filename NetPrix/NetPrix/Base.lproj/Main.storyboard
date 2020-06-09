@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NetPrix" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,35 +18,140 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Vx-gg-cOi">
-                                <rect key="frame" x="0.0" y="20" width="320" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="JLY-i8-Xjy">
+                                <rect key="frame" x="10" y="20" width="300" height="548"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NetPrix" textAlignment="center" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSQ-1W-tDx">
-                                        <rect key="frame" x="53" y="8" width="215" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="shadowOffset" width="0.0" height="2"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Filmes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDl-yG-q9h">
-                                        <rect key="frame" x="135" y="42" width="51" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NetPrix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIP-wZ-piN">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="uup-ow-h7a"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                        <color key="textColor" red="1" green="0.27058823529411763" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="rJS-60-zTC">
+                                        <rect key="frame" x="0.0" y="33" width="300" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="TZw-u1-4sZ"/>
+                                        </constraints>
+                                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melhores filmes da semana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3A-GO-I8B">
+                                        <rect key="frame" x="0.0" y="66" width="300" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="7o6-29-fa5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Ah-FH-Hcn">
+                                        <rect key="frame" x="0.0" y="99" width="300" height="449"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9IA-hn-X01">
+                                            <size key="itemSize" width="135" height="165"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="celulaFilme" id="UX2-TI-bhD" customClass="ColecaoDeFilmeCollectionViewCell" customModule="NetPrix" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="135" height="165"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="135" height="165"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NlT-bi-0uh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="135" height="144"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstItem="NlT-bi-0uh" firstAttribute="top" secondItem="UX2-TI-bhD" secondAttribute="top" id="Mxe-vR-quT"/>
+                                                    <constraint firstItem="NlT-bi-0uh" firstAttribute="leading" secondItem="UX2-TI-bhD" secondAttribute="leading" id="fJz-si-hSh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="NlT-bi-0uh" secondAttribute="bottom" id="jR1-e8-W0Y"/>
+                                                    <constraint firstAttribute="trailing" secondItem="NlT-bi-0uh" secondAttribute="trailing" id="xEd-HV-ckG"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="imagemDoFilme" destination="NlT-bi-0uh" id="aOH-sE-qiy"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.68235294120000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JLY-i8-Xjy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="277-8p-Dpp"/>
+                            <constraint firstAttribute="trailing" secondItem="JLY-i8-Xjy" secondAttribute="trailing" constant="10" id="A9E-gK-Y46"/>
+                            <constraint firstItem="JLY-i8-Xjy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="fN9-Ma-EWJ"/>
+                            <constraint firstItem="JLY-i8-Xjy" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="naI-zy-CDT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="J4R-Ks-0sl"/>
+                    <connections>
+                        <outlet property="colecaoDeFilmes" destination="2Ah-FH-Hcn" id="Z3f-VF-AJ8"/>
+                        <outlet property="pesquisarFilmes" destination="rJS-60-zTC" id="UQa-u4-O8N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-84.375" y="87.676056338028175"/>
+        </scene>
+        <!--Inicio-->
+        <scene sceneID="2QG-we-EHg">
+            <objects>
+                <viewController storyboardIdentifier="detalhes" id="JqL-43-IjV" customClass="DetalhesFilmesViewController" customModule="NetPrix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jsk-EX-XFM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uzL-Qw-RJc">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3KC-3O-Y1m">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bad Boys" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qa-qZ-Skj">
+                                        <rect key="frame" x="0.0" y="185" width="320" height="316"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="24"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top 5 da semana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsI-nl-bXQ">
+                                        <rect key="frame" x="0.0" y="501" width="320" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinopse: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyT-SN-iyZ">
+                                        <rect key="frame" x="0.0" y="524.5" width="320" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uzL-Qw-RJc" firstAttribute="bottom" secondItem="IJt-Ap-Kfe" secondAttribute="bottom" id="TH5-dB-kPl"/>
+                            <constraint firstItem="uzL-Qw-RJc" firstAttribute="leading" secondItem="IJt-Ap-Kfe" secondAttribute="leading" id="n9g-MF-D6A"/>
+                            <constraint firstItem="uzL-Qw-RJc" firstAttribute="top" secondItem="IJt-Ap-Kfe" secondAttribute="top" id="o5D-zR-38G"/>
+                            <constraint firstItem="uzL-Qw-RJc" firstAttribute="trailing" secondItem="IJt-Ap-Kfe" secondAttribute="trailing" id="tbp-Tg-Hyt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IJt-Ap-Kfe"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Inicio" id="aBL-uL-Eaa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="82r-sO-nAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="88"/>
         </scene>
     </scenes>
 </document>
