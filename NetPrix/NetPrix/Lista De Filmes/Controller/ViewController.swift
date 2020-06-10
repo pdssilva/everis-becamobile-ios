@@ -49,7 +49,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let celulaFilme = collectionView.dequeueReusableCell(withReuseIdentifier: "celulaFilme", for: indexPath) as! ColecaoDeFilmeCollectionViewCell
-        print(filmes[indexPath.item])
         celulaFilme.setarImagem(filmes[indexPath.item])
         
         celulaFilme.layer.borderWidth = 0.5
@@ -65,8 +64,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let filme = filmes[indexPath.item]
+        print(filme.title)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "detalhes") as! DetalhesFilmesViewController
+        controller.filmeSelecionado = filme
         self.present(controller, animated: true, completion: nil)
 
     }

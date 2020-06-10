@@ -15,7 +15,7 @@ class ColecaoDeFilmeCollectionViewCell: UICollectionViewCell {
     
         func setarImagem(_ filme:Filme) {
         
-            let url = "https://image.tmdb.org/t/p/w500" + filme.posterPath!
+            let url = "https://image.tmdb.org/t/p/w500" + filme.posterPath
             guard let imageUrl = URL(string: url) else { return }
         imagemDoFilme.af_setImage(withURL: imageUrl)
     }

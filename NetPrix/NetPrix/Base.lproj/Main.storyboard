@@ -75,7 +75,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="NlT-bi-0uh" secondAttribute="trailing" id="xEd-HV-ckG"/>
                                                 </constraints>
                                                 <connections>
-                                                    <outlet property="imagemDoFilme" destination="NlT-bi-0uh" id="aOH-sE-qiy"/>
+                                                    <outlet property="imagemDoFilme" destination="NlT-bi-0uh" id="1QV-sB-8b7"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -111,47 +111,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uzL-Qw-RJc">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            <stackView opaque="NO" contentMode="center" ambiguous="YES" axis="vertical" distribution="equalCentering" spacing="-6" translatesAutoresizingMaskIntoConstraints="NO" id="skn-EV-LDq">
+                                <rect key="frame" x="80" y="20" width="160" height="180"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="af6-Py-wZJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="30"/>
+                                        <state key="normal" title="Voltar"/>
+                                        <connections>
+                                            <action selector="botaoVoltar:" destination="JqL-43-IjV" eventType="touchUpInside" id="vfC-xZ-kpN"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3KC-3O-Y1m">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
+                                        <rect key="frame" x="0.0" y="24" width="160" height="156"/>
                                     </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="GlI-dN-2Ue">
+                                <rect key="frame" x="95" y="208" width="130" height="76.5"/>
+                                <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bad Boys" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qa-qZ-Skj">
-                                        <rect key="frame" x="0.0" y="185" width="320" height="316"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="24"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top 5 da semana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsI-nl-bXQ">
-                                        <rect key="frame" x="0.0" y="501" width="320" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="130" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinopse: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyT-SN-iyZ">
-                                        <rect key="frame" x="0.0" y="524.5" width="320" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinopse: " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="319" translatesAutoresizingMaskIntoConstraints="NO" id="nyT-SN-iyZ">
+                                        <rect key="frame" x="0.0" y="57" width="130" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="uzL-Qw-RJc" firstAttribute="bottom" secondItem="IJt-Ap-Kfe" secondAttribute="bottom" id="TH5-dB-kPl"/>
-                            <constraint firstItem="uzL-Qw-RJc" firstAttribute="leading" secondItem="IJt-Ap-Kfe" secondAttribute="leading" id="n9g-MF-D6A"/>
-                            <constraint firstItem="uzL-Qw-RJc" firstAttribute="top" secondItem="IJt-Ap-Kfe" secondAttribute="top" id="o5D-zR-38G"/>
-                            <constraint firstItem="uzL-Qw-RJc" firstAttribute="trailing" secondItem="IJt-Ap-Kfe" secondAttribute="trailing" id="tbp-Tg-Hyt"/>
+                            <constraint firstItem="GlI-dN-2Ue" firstAttribute="top" secondItem="skn-EV-LDq" secondAttribute="bottom" constant="8" id="8rx-3i-GWA"/>
+                            <constraint firstItem="skn-EV-LDq" firstAttribute="top" secondItem="IJt-Ap-Kfe" secondAttribute="top" id="Zro-U2-cc6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IJt-Ap-Kfe"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Inicio" id="aBL-uL-Eaa"/>
+                    <connections>
+                        <outlet property="imagemCapa" destination="3KC-3O-Y1m" id="owf-2w-asX"/>
+                        <outlet property="labelRatingFilme" destination="QsI-nl-bXQ" id="ruJ-Y7-S3k"/>
+                        <outlet property="labelSinopseFilme" destination="nyT-SN-iyZ" id="VNz-KD-Gzg"/>
+                        <outlet property="labelTituloFilme" destination="3qa-qZ-Skj" id="cf0-HC-vtj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82r-sO-nAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="88"/>
+            <point key="canvasLocation" x="753.75" y="87.676056338028175"/>
         </scene>
     </scenes>
 </document>

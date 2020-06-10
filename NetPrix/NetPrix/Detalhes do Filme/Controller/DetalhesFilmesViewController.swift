@@ -7,24 +7,42 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class DetalhesFilmesViewController: UIViewController {
 
+    
+    @IBOutlet weak var imagemCapa: UIImageView!
+    @IBOutlet weak var labelTituloFilme: UILabel!
+    @IBOutlet weak var labelRatingFilme: UILabel!
+    @IBOutlet weak var labelSinopseFilme: UILabel!
+    
+   
+    var filmeSelecionado:Filme? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+        if let filme = filmeSelecionado{
+ 
+            
+            guard let popularidade = filme.popularity else{return}
+            let url = "https://image.tmdb.org/t/p/w500" + filme.posterPath
+            guard let imageUrl = URL(string: url) else { return }
+            imagemCapa.af_setImage(withURL: imageUrl)
+            
+            self.labelTituloFilme.text = filme.title
+            self.labelSinopseFilme.text = filme.overview
+            self.labelRatingFilme.text = String(popularidade)
+            self.imagemCapa.af_setImage(withURL: imageUrl)
+            
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func botaoVoltar(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
-    */
-
+    
+    
 }
