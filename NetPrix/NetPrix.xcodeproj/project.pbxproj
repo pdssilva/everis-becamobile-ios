@@ -51,7 +51,6 @@
 		1707F3FB2490276600A99F0F /* Detalhes do Filme */ = {
 			isa = PBXGroup;
 			children = (
-				1707F3FD2490278100A99F0F /* View */,
 				1707F3FC2490277300A99F0F /* Controller */,
 			);
 			path = "Detalhes do Filme";
@@ -63,13 +62,6 @@
 				1707F3FE24902ED900A99F0F /* DetalhesFilmesViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		1707F3FD2490278100A99F0F /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		1739493D248FE02E003052CE /* View */ = {

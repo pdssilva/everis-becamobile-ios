@@ -31,10 +31,9 @@ class DetalhesFilmesViewController: UIViewController {
             let url = "https://image.tmdb.org/t/p/w500" + filme.posterPath
             guard let imageUrl = URL(string: url) else { return }
             imagemCapa.af_setImage(withURL: imageUrl)
-            
             self.labelTituloFilme.text = filme.title
-            self.labelSinopseFilme.text = filme.overview
-            self.labelRatingFilme.text = String(popularidade)
+            self.labelSinopseFilme.text = "Sinopse: \(filme.overview)"
+            self.labelRatingFilme.text = "Popularidade: \(String(popularidade))"
             self.imagemCapa.af_setImage(withURL: imageUrl)
             
         }

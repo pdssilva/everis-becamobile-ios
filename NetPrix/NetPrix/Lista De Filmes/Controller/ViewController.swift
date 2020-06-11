@@ -20,28 +20,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         getFilme()
         colecaoDeFilmes.dataSource = self
         colecaoDeFilmes.delegate = self
-        pesquisarFilmes.delegate = self
     }
     
     var filmes:Array<Filme> = []
     
     func getFilme(){
         _ = FilmeAPI().getFilme(sucesso: { (json) in
-            
       guard let jsonData = Filme.converteListaParaData(json) else {return}
-            
       guard let listaDeFilme = Filme.decodificaFilme(jsonData) else {return}
-            
       self.filmes = listaDeFilme
-      
       self.colecaoDeFilmes.reloadData()
-            
-//            for filme in listaDeFilme{
-//                print(filme.posterPath!)
-//            }
         })
     }
-    
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return filmes.count
@@ -63,12 +53,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return CGSize(width: larguraDaCelula - 15 , height: 160)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let filme = filmes[indexPath.item]
-        print(filme.title)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "detalhes") as! DetalhesFilmesViewController
         controller.filmeSelecionado = filme
+        print(filme)
         self.present(controller, animated: true, completion: nil)
 
     }
