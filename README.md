@@ -1,41 +1,31 @@
-# Avaliação Beca Mobile iOS
+# Conclusão projeto BECA MOBILE IOS
 
-Criar um aplicativo que realize a listagem de filmes e exibição dos detalhes:
- * Tela principal, lista de filmes:
-    - Listar capa dos filmes que são tendências da semana. 
- * Tela de detalhes do filme:  
-    - Quando o usuário selecionar um filme, o aplicativo deve direciona-lo para uma segunda tela e exibir o título, capa, rating e sinopse. 
+*Sobre o curso da Alura 
 
-* API para consumo: 
-  - A listagem de filmes deve ser consultada na API https://developers.themoviedb.org/3/getting-started/introduction 
-    Ao se cadastrar você receberá uma chave de acesso, que deverá ser usada nas requisições. 
-  - Requisição para listar as tendências https://developers.themoviedb.org/3/trending/get-trending
-    - Ex.: https://api.themoviedb.org/3/trending/all/week?api_key=00000&language=pt-BR
-  - Requisição para listar os detalhes https://developers.themoviedb.org/3/movies/get-movie-details
-    - Ex.: https://api.themoviedb.org/3/movie/454626?api_key=00000&language=pt-BR
-    
-* Se opcionalmente quiser fazer o clone via SSH, segue ajuda do GitHub:
-  - https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-  - Se for usar o ssh para clone, este comando ajuda a salvar a chave de forma local: 
-    - ssh-add -K ~/.ssh/id_rsa
-  
-* Ao iniciar a avaliação:
-  - Faça um fork deste projeto
-  - Fazer o cadastro no site para consumir a API
-  
-* Mandando bem na avaliação:
-  - Realize quantos commits puder, não queremos somente a solução final; queremos saber como você chegou lá. Sua evolução vale tanto quanto o resultado final.
-  - A arquitetura é livre, não se procupe com isto neste momento.
-  - O Design é livre, mas se tiver um tempinho... gostariamos que fizesse uma revisão final, usando as dicas da Apple:
-  https://developer.apple.com/design/tips/
-  - Sugestões de bibliotecas:
-     - Carregamento de imagens 
-       - https://github.com/Alamofire/AlamofireImage
-     - Requisições:
-       - Opção 1) http https://github.com/Alamofire/Alamofire
-       - Opção 2) https://github.com/Moya/Moya
+Achei muito boa toda dinâmica do curso, consegui concluir as atividades do curso, apesar de ter que voltar em algumas coisas para fixar o conhecimento, achei a formação agregou muito meu conhecimento, tendo em vista que eu já havia estudado apenas Java há bastante tempo.
 
-* Ao finalizar a avaliação:
-   - Quando finalizar a implementação faça um pull request; na descrição informe qual a abordagem que você utilizou para chegar na solução, descreva também quais foram os maiores desafios para concluir a avaliação.
+*Sobre o apoio dos líderes do projeto 
 
-* :clap: Parabéns por ter chegado até aqui! :smile: _Um grande abraço e bem vindo ao time Mobile iOS_ :iphone: :punch:
+Vocês nos apoiaram muito e nos incentivaram muito, acredito que esse case do projeto foi de muito sucesso, espero participar de mais projetos nesse formato de formação pois acho que é de extrema valia para nossa carreira dentro da Everis e como profissionais de forma geral.
+
+*Sobre o projeto final
+
+A princípio achei que não seria capaz de fazer a entrega, mas confesso que acabei me esquecendo que estamos trabalhando em equipe e quando me lembrei disso consegui sinalizar minhas dificuldades para os membros do time e eles me ajudaram a desenrolar e seguir no objetivo.
+
+*Sobre como desenvolvi meu APP 
+
+Minha maior dificuldade com certeza foi em relação as APIs, primeiro que não havia entendido muito bem o conceito, e me esforcei para estudar e poder entender, no segundo momento não sabia como fazer, e foi ai que retornei ao curso da Alura e recorri a internet de forma geral. 
+
+Meu projeto foi estruturado conforme as funções, acredito que daria para refatorar mais, porém esse foi o limite em que consegui, na classe Filme API fiz a lógica para poder comunicar meu código com API, usei o Alamofire com o metogo Get e tive que fazer o tratamento da resposta com o switch case, com essa classe pronta continuei a construção do meu App.
+
+Na API verifiquei quais eram os atributos e coloquei todos na classe FILME com o método init, esses foram meus dois model, com eles prontos consegui trabalhar melhor.
+
+Passei então para construção do layout da tela, criei a primeira tela e seu view controller, coloquei um stackview para poder controlar as constrainst melhor e a exibição em outros aparelhos, inseri o conceito de coleção, assim podia fazer o controle das minhas células e esse controller coloquei em uma classe diferente ColecaoDeFilmeControllerViewCell, nela coloquei os outlets que iria utilizar, nessa tela apenas a imagem e então tratei elas no view controller.
+
+Uma outra dificuldade que tive foi pegar o retorno da requisição e poder transformar ela em um objeto que eu pudesse manipular, realizei isso com a ajuda de algumas classes do swift jsonDeserealization, esses métodos estão na classe de filmes, e o método que realmente pega essas informações e transforma eles em objeto está no meu view controller getFilme
+
+Com a primeira tela pronta, me dediquei a fazer a segunda tela começando também pelo o layout, por se tratar de uma outra tela, coloquei o viewController dela separado “DetalhesViewController”, como basicamente ela é uma tela apenas de apresentação e não tem muita ação nela tem os outlets setados, porém para uma futura implementação por boas práticas é melhor montar dessa forma.
+
+O próximo passo foi fazer com que o meu clique na imagem passasse para a próxima tela, nessa fase usei o didselectitem método para pegar o clique e percorrer a minha lista de filme e chamar meu view controller de detalhes, esse método está no view controller da home
+
+Acredito que tenha sido isso, tive algumas dificuldades ao longo do curso e acredito que tenha muito o que aprender, mas aprendi muito até aqui!
