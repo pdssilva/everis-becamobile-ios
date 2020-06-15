@@ -30,6 +30,14 @@ class FilmeAPI: Codable{
             }
         }
     }
+    
+    func imagemDaUrl(posterPath: String) -> URL? {
+        
+        let url = "https://image.tmdb.org/t/p/w500" + posterPath
+        guard let imageUrl = URL(string: url) else { return nil}
+        
+        return imageUrl
+    }
 }
 
 
