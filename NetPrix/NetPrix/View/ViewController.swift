@@ -39,12 +39,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let celulaFilme = collectionView.dequeueReusableCell(withReuseIdentifier: "celulaFilme", for: indexPath) as! ColecaoDeFilmeCollectionViewCell
-        celulaFilme.setarImagem(filmes[indexPath.item])
-        
+        celulaFilme.setarImagem(postPath: filmes[indexPath.item].posterPath)
+        let filmeAtual = filmes[indexPath.item]
+
         celulaFilme.layer.borderWidth = 0.5
         celulaFilme.layer.borderColor = UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1).cgColor
         celulaFilme.layer.cornerRadius = 10
         
+        celulaFilme.chamaAcessibility(filme: filmeAtual)
         return celulaFilme
     }
     
